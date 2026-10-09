@@ -5,23 +5,24 @@ runProgram = input("Would you like to try running the program? (Yes/No): ")
 
 studentCount = 0
 
-while runProgram.lower() == "yes":
+if runProgram.lower() in ("yes", "y"):
+    while runProgram.lower() in ("yes", "y"):
 
-    LastName = input("What's your last name? ")
-    ExamScore1 = float(input("What is your first exam score? "))
-    ExamScore2 = float(input("What is your second exam score? "))
+        LastName = input("What's your last name? ")
+        ExamScore1 = float(input("What is your first exam score? "))
+        ExamScore2 = float(input("What is your second exam score? "))
 
-    Average = (ExamScore1 + ExamScore2) * 0.5
+        Average = (ExamScore1 + ExamScore2) * 0.5
 
-    studentCount += 1
+        studentCount += 1
 
-    print()
-    print("Last Name:", LastName)
-    print("Average:", Average)
-    print("Number of students entered:", studentCount)
-    print()
+        print()
+        print("Last Name:", LastName)
+        print("Average:", Average)
+        print("Number of students entered:", studentCount)
+        print()
 
-    runProgram = input("Would you like to enter another student to run the program? (Yes/No): ")
+        runProgram = input("Would you like to enter another student to run the program? (Yes/No): ")
 
 print()
 print("Program ended.")
